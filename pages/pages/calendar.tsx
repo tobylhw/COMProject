@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -12,18 +11,14 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+
 //icon
-import HomeIcon from '@mui/icons-material/Home';
-import SchoolIcon from '@mui/icons-material/School';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+
 //AppBarMenu
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { DrawerListItems } from './drawerlistitem'
 
 const drawerWidth = 240;
 
@@ -97,7 +92,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer() {
-    
+
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -137,7 +132,7 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        Drawer Title
+                        Assesssment Calendar
                     </Typography>
 
                     <IconButton
@@ -180,43 +175,7 @@ export default function MiniDrawer() {
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
-                <List>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <HomeIcon />
-                        </ListItemIcon>
-                        <ListItemText>
-                            Home
-                        </ListItemText>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemText>
-                            Inbox
-                        </ListItemText>
-                    </ListItem>
-                </List>
-                <Divider />
-                <List>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <SchoolIcon />
-                        </ListItemIcon>
-                        <ListItemText>
-                            School
-                        </ListItemText>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <MenuBookIcon />
-                        </ListItemIcon>
-                        <ListItemText>
-                            Homework
-                        </ListItemText>
-                    </ListItem>
-                </List>
+                {DrawerListItems}
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />

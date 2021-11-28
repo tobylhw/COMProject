@@ -20,7 +20,6 @@ import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -28,16 +27,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 //DrawerList
 import { DrawerListItems } from './drawerlistitem'
-//icon
-import HomeIcon from '@mui/icons-material/Home';
-import SchoolIcon from '@mui/icons-material/School';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 //AppBarMenu
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
@@ -159,7 +150,7 @@ export default function Home(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        Index page TITLE HERE Home.tsx
+                        {"Home.tsx"} Index page TITLE HERE
                     </Typography>
 
                     <IconButton
@@ -245,7 +236,9 @@ export default function Home(props) {
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
                             <Button variant="outlined" href="TEST_drawer">Drawer Testing</Button>
-
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="appbar">AppBar</Button>
                         </Stack>
                     </Box>
                     <p>{"<p>"}Testing {"</p>"} </p>

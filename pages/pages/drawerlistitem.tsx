@@ -1,6 +1,5 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,7 +26,7 @@ export const DrawerListItems = (
                     Home
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton component="a" href="calendar">
                 <ListItemIcon>
                     <EventIcon />
                 </ListItemIcon>
@@ -35,7 +34,7 @@ export const DrawerListItems = (
                     Calendar
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton component="a" href="social">
                 <ListItemIcon>
                     <ConnectWithoutContactIcon />
                 </ListItemIcon>
@@ -43,7 +42,7 @@ export const DrawerListItems = (
                     Social
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton component="a" href="grade">
                 <ListItemIcon>
                     <GradingIcon />
                 </ListItemIcon>
@@ -81,7 +80,7 @@ export const DrawerListItems = (
         </List>
         <Divider />
         <List>
-            <ListItemButton>
+            <ListItemButton disabled>
                 <ListItemIcon>
                     <SettingsIcon />
                 </ListItemIcon>
