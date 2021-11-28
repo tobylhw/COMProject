@@ -206,9 +206,14 @@ export default function Home(props) {
                             <Button variant="contained" href="layoutTemplate">Web Layout Template</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="newUser">New user registration</Button>
-                            <Button variant="outlined" href="login">Login</Button>
                             <Button variant="outlined" href="home">Home</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="login">Login</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="newUser_hsu">New user hsu</Button>
+                            <Button variant="outlined" href="newUser_public">New user public</Button>
                         </Stack>
                         <Box >
                             {"<Box>"}Not done:{"</Box>"}
@@ -236,9 +241,6 @@ export default function Home(props) {
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
                             <Button variant="outlined" href="TEST_drawer">Drawer Testing</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="appbar">AppBar</Button>
                         </Stack>
                     </Box>
                     <p>{"<p>"}Testing {"</p>"} </p>

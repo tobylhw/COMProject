@@ -15,11 +15,20 @@ import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
+//Dialog
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+//Tabs
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
-            {'COM3102 Group X'}
+            {'COM3102 Group Project'}
         </Typography>
     );
 }
@@ -40,6 +49,40 @@ function ElevationScroll(props) {
     });
 }
 
+//Tabs
+interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index: number) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
 export default function ElevateAppBar(props) {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -51,6 +94,36 @@ export default function ElevateAppBar(props) {
             password: data.get('password'),
         });
     };
+
+    //Dialog
+    const [openDialog, setOpenDialog] = React.useState(false);
+
+    const handleClickOpenDialog = () => {
+        setOpenDialog(true);
+    };
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+    };
+
+    //Dialog for forget pw
+    const [openDialogfgpw, setOpenDialogfgpw] = React.useState(false);
+
+    const handleClickOpenDialogfgpw = () => {
+        setOpenDialogfgpw(true);
+    };
+
+    const handleCloseDialogfgpw = () => {
+        setOpenDialogfgpw(false);
+    };
+
+    //Tabs
+    const [valueTab, setValueTab] = React.useState(0);
+
+    const handleChangeTab = (event: React.SyntheticEvent, newValue: number) => {
+        setValueTab(newValue);
+    };
+
 
     return (
         <React.Fragment>
@@ -87,26 +160,64 @@ export default function ElevateAppBar(props) {
                                     Sign in
                                 </Typography>
                                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                                    <TextField
-                                        margin="normal"
-                                        required
-                                        fullWidth
-                                        id="email"
-                                        label="Email Address"
-                                        name="email"
-                                        autoComplete="email"
-                                        autoFocus
-                                    />
-                                    <TextField
-                                        margin="normal"
-                                        required
-                                        fullWidth
-                                        name="password"
-                                        label="Password"
-                                        type="password"
-                                        id="password"
-                                        autoComplete="current-password"
-                                    />
+
+
+                                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                        <Tabs value={valueTab} onChange={handleChangeTab} aria-label="basic tabs example" centered>
+                                            <Tab label="hsu students" {...a11yProps(0)} />
+                                            <Tab label="public" {...a11yProps(1)} />
+                                        </Tabs>
+                                    </Box>
+                                    <TabPanel value={valueTab} index={0}>
+                                        <TextField
+                                            margin="normal"
+                                            required
+                                            fullWidth
+                                            id="sid"
+                                            label="Student ID"
+                                            name="sid"
+                                            autoComplete="sid"
+                                            autoFocus
+                                        />
+                                        <TextField
+                                            margin="normal"
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            label="Password"
+                                            type="password"
+                                            id="password"
+                                            autoComplete="current-password"
+                                        />
+
+                                    </TabPanel>
+                                    <TabPanel value={valueTab} index={1}>
+                                        <TextField
+                                            margin="normal"
+                                            required
+                                            fullWidth
+                                            id="email"
+                                            label="Email Address"
+                                            name="email"
+                                            autoComplete="email"
+                                            autoFocus
+                                        />
+                                        <TextField
+                                            margin="normal"
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            label="Password"
+                                            type="password"
+                                            id="password"
+                                            autoComplete="current-password"
+                                        />
+
+                                    </TabPanel>
+
+
+                                    
+
                                     <FormControlLabel
                                         control={<Checkbox value="remember" color="primary" />}
                                         label="Remember me"
@@ -121,15 +232,59 @@ export default function ElevateAppBar(props) {
                                     </Button>
                                     <Grid container>
                                         <Grid item xs>
-                                            <Link href="#" variant="body2">
+                                            <Link onClick={handleClickOpenDialogfgpw} href="#" variant="body2">
                                                 Forgot password?
                                             </Link>
                                         </Grid>
+
+                                        <Dialog
+                                            open={openDialogfgpw}
+                                            onClose={handleCloseDialogfgpw}
+                                            aria-labelledby="alert-dialog-title"
+                                            aria-describedby="alert-dialog-description"
+                                        >
+                                            <DialogTitle id="alert-dialog-title">
+                                                {"Forgot password"}
+                                            </DialogTitle>
+                                            <DialogContent>
+                                                <DialogContentText id="alert-dialog-description">
+                                                    Please contact ITSC
+                                                </DialogContentText>
+                                            </DialogContent>
+                                            <DialogActions>
+
+                                                <Button onClick={handleCloseDialogfgpw} autoFocus>
+                                                    Close
+                                                </Button>
+                                            </DialogActions>
+                                        </Dialog>
+
                                         <Grid item>
-                                            <Link href="#" variant="body2">
+                                            <Link onClick={handleClickOpenDialog} href="#" variant="body2">
                                                 {"Don't have an account? Sign Up"}
                                             </Link>
                                         </Grid>
+
+                                        <Dialog
+                                            open={openDialog}
+                                            onClose={handleCloseDialog}
+                                            aria-labelledby="alert-dialog-title"
+                                            aria-describedby="alert-dialog-description"
+                                        >
+                                            <DialogTitle id="alert-dialog-title">
+                                                {'Are you an HSU student?'}
+                                            </DialogTitle>
+                                            <DialogContent>
+                                                <DialogContentText id="alert-dialog-description">
+                                                    We request different personal information for HSU students
+                                                </DialogContentText>
+                                            </DialogContent>
+                                            <DialogActions>
+                                                <Button href="newUser_public" onClick={handleCloseDialog}>No</Button>
+                                                <Button href="newUser_hsu" onClick={handleCloseDialog} autoFocus>Yes</Button>
+                                            </DialogActions>
+                                        </Dialog>
+
                                     </Grid>
                                 </Box>
                             </Box>

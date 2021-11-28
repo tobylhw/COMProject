@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
-            {'COM3102 Group X'}
+            {'COM3102 Group Project'}
         </Typography>
     );
 }
@@ -59,7 +59,7 @@ export default function ElevateAppBar(props) {
                 <AppBar>
                     <Toolbar>
                         <Typography variant="h6" component="div">
-                            New accouont page with scroll to Elevate App Bar
+                            New accouont page for public
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -109,7 +109,7 @@ export default function ElevateAppBar(props) {
                                                 autoComplete="family-name"
                                             />
                                         </Grid>*/}
-                                        <Grid item xs={12} sm={6}>
+                                        {/*<Grid item xs={12} sm={6}>
                                             <TextField
                                                 required
                                                 fullWidth
@@ -117,7 +117,7 @@ export default function ElevateAppBar(props) {
                                                 label="Student ID"
                                                 name="email"
                                                 autoComplete="email"
-                                                /*pattern = "[s]{1}[0-9]{6}"*/
+                                                //pattern = "[s]{1}[0-9]{6}"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
@@ -129,15 +129,15 @@ export default function ElevateAppBar(props) {
                                                 name="email"
                                                 autoComplete="email"
                                             />
-                                        </Grid>
+                                        </Grid>*/}
                                         <Grid item xs={12}>
                                             <TextField
                                                 required
                                                 fullWidth
-                                                id="email"
-                                                label="Year of entrance"
-                                                name="email"
-                                                autoComplete="email"
+                                                id="username"
+                                                label="User name"
+                                                name="username"
+                                                autoComplete="username"
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -151,12 +151,7 @@ export default function ElevateAppBar(props) {
                                                 autoComplete="new-password"
                                             />
                                         </Grid>
-                                        <Grid item xs={12}>
-                                            <FormControlLabel
-                                                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                                label="I want to receive inspiration, marketing promotions and updates via email."
-                                            />
-                                        </Grid>
+                                        
                                     </Grid>
                                     <Button
                                         type="submit"
@@ -168,7 +163,7 @@ export default function ElevateAppBar(props) {
                                     </Button>
                                     <Grid container justifyContent="flex-end">
                                         <Grid item>
-                                            <Link href="#" variant="body2">
+                                            <Link href="login" variant="body2">
                                                 Already have an account? Sign in
                                             </Link>
                                         </Grid>
