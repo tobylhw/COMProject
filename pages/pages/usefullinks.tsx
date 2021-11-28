@@ -12,13 +12,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
+//List
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+//import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+
 //icon
+//import SendIcon from '@mui/icons-material/Send';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 //AppBarMenu
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { DrawerListItems } from './drawerlistitem'
+import { ListItemButton } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -179,12 +189,130 @@ export default function MiniDrawer() {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Typography paragraph>
+                <Box>
+                    <List
+                        sx={{ width: '100%', maxWidth: 400, }}
+                        component="nav"
+                        aria-labelledby="List 1"
+                        subheader={
+                            <ListSubheader component="div" id="nested-list-subheader">
+                                Teaching & Learning
+                            </ListSubheader>
+                        }
+                    >
+                        <ListItemButton component='a' href='https://www.hsu.edu.hk/en/'>
+                            <ListItemText inset primary="HSUHK" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://moodle.hsu.edu.hk/'>
+                            <ListItemIcon>
+
+                            </ListItemIcon>
+                            <ListItemText primary="Moodle" secondary=" " />
+                            <OpenInNewIcon/>
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://ecampus.hsu.edu.hk/desktop/'>
+                            <ListItemText inset primary="eCampus" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://rtiac.clarityenglish.com/#prefix=HSMC'>
+                            <ListItemText inset primary="Road to IELTS" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://academic.veriguide.org/academic/login_HSUHK.jspx'>
+                            <ListItemText inset primary="VeriGuide" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                    </List>
+                    <List
+                        sx={{ width: '100%', maxWidth: 400, }}
+                        component="nav"
+                        aria-labelledby="List 1"
+                        subheader={
+                            <ListSubheader component="div" id="nested-list-subheader">
+                                Academic Websites
+                            </ListSubheader>
+                        }
+                    >
+                        <ListItemButton component='a' href='https://ceu.hsu.edu.hk/en/home/'>
+                            <ListItemIcon>
+                                
+                            </ListItemIcon>
+                            <ListItemText primary="CEU" secondary="Continuing Education Unit" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://scom.hsu.edu.hk/en/school-of-communication-2/'>
+                            <ListItemText inset primary="SCOM" secondary="School of Communication" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://research.hsu.edu.hk/'>
+                            <ListItemText inset primary="Researach Database" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                    </List>
+                    <List
+                        sx={{ width: '100%', maxWidth: 400, }}
+                        component="nav"
+                        aria-labelledby="List 1"
+                        subheader={
+                            <ListSubheader component="div" id="nested-list-subheader">
+                                Administrative Offices
+                            </ListSubheader>
+                        }
+                    >
+                        <ListItemButton component='a' href='https://sites.google.com/hsu.edu.hk/aaao-internal?pli=1&authuser=3'>
+                            <ListItemIcon>
+                                
+                            </ListItemIcon>
+                            <ListItemText primary="AAAO" secondary="Advancement and Alumni Affairs Office" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://cdmo.hsu.edu.hk/'>
+                            <ListItemText inset primary="CDMO" secondary="Campus Development and Management Office" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://sites.google.com/a/hsu.edu.hk/cpao/about-cpao'>
+                            <ListItemText inset primary="CPAO" secondary="Communications and Public Affairs Office" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://edc.hsu.edu.hk/'>
+                            <ListItemText inset primary="EDC" secondary="Executive Development Centre" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://fo.hsu.edu.hk/'>
+                            <ListItemText inset primary="FO" secondary="Finance Office" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://itsc.hsu.edu.hk/'>
+                            <ListItemText inset primary="ITSC" secondary="Information Technology Services Centre" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://library.hsu.edu.hk/'>
+                            <ListItemText inset primary="Library" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://registry.hsu.edu.hk/'>
+                            <ListItemText inset primary="Registry" secondary=" " />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://sao.hsu.edu.hk/'>
+                            <ListItemText inset primary="SAO" secondary="Student Affairs Office" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                        <ListItemButton component='a' href='https://sites.google.com/a/hsu.edu.hk/vpodo/home'>
+                            <ListItemText inset primary="VPODO" secondary="Vice-President (Organisational Development)" />
+                            <OpenInNewIcon />
+                        </ListItemButton>
+                    </List>
+                 
+                    {/*<Typography paragraph>
                     Paragraph 1
                 </Typography>
                 <Typography paragraph>
                     Paragraph 2
-                </Typography>
+                    </Typography>*/}
+
+                </Box>
             </Box>
         </Box>
     );

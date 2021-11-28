@@ -1,4 +1,20 @@
+/* CMD
+cd C:\Users\tobyl\compj
+
+npm run dev
+npm install @types/react typescript
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @fontsource/roboto
+*/
+
+import { useState } from 'react';
 import * as React from 'react';
+
+//font
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -11,16 +27,16 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-
-//icon
-
+//DrawerList
+import { DrawerListItems } from './drawerlistitem'
 //AppBarMenu
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import { DrawerListItems } from './drawerlistitem'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
-//Data
+
 
 const drawerWidth = 240;
 
@@ -93,7 +109,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function MiniDrawer() {
+export default function Home(props) {
 
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -134,7 +150,7 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        School
+                        Links to all pages
                     </Typography>
 
                     <IconButton
@@ -181,12 +197,72 @@ export default function MiniDrawer() {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Typography paragraph>
-                    Paragraph 1 School history...
-                </Typography>
-                <Typography paragraph>
-                    Paragraph 2
-                </Typography>
+                <Box >
+                    <Box >
+                        {"<Box>"}Go to pages:{"</Box>"}
+                    </Box>
+                    <Box sx={{ p: 1 }}>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="contained" href="layoutTemplate">Web Layout Template</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="login">Login</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="newUser_hsu">New user hsu</Button>
+                            <Button variant="outlined" href="newUser_public">New user public</Button>
+                        </Stack>
+                        <Divider />
+                        <Box >
+                            {"<Box>"}Not done:{"</Box>"}
+                        </Box>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="home">Home</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button disabled variant="outlined" href="">Calendar</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button disabled variant="outlined" href="">Social</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button disabled variant="outlined" href="">Grade</Button>
+                        </Stack>
+                        <Divider />
+                        
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="school">School</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="catering">Catering</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="usefullinks">Useful Links</Button>
+                        </Stack>
+                        <Divider />
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button disabled variant="outlined" href="">Settings</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="help">help</Button>
+                        </Stack>
+                    </Box>
+                    <Divider />
+                    <Box >
+                        {"<Box>"}Layout testings:{"</Box>"}
+                    </Box>
+                    <Box sx={{ p: 1 }}>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="TEST_login">Login Layout Testing</Button>
+                            <Button variant="outlined" href="TEST_Dashboard_Layout_Demo">Dashboard Demo Layout</Button>
+                        </Stack>
+                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
+                            <Button variant="outlined" href="TEST_drawer">Drawer Testing</Button>
+                        </Stack>
+                    </Box>
+                    <p>{"<p>"}Testing {"</p>"} </p>
+                    <p>{"<p>"}Testing2{"</p>"}</p>
+                </Box>
             </Box>
         </Box>
     );

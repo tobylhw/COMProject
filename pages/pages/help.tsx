@@ -20,8 +20,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { DrawerListItems } from './drawerlistitem'
 
-//Data
-
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -134,7 +132,7 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        School
+                        Help
                     </Typography>
 
                     <IconButton
@@ -182,7 +180,8 @@ export default function MiniDrawer() {
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
                 <Typography paragraph>
-                    Paragraph 1 School history...
+                    {'Paragraph 1 '}
+                    {'Please contact ITSC.'}
                 </Typography>
                 <Typography paragraph>
                     Paragraph 2

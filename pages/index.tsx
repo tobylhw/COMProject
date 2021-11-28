@@ -212,44 +212,12 @@ export default function Home(props) {
                     </Box>
                     <Box sx={{ p: 1 }}>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="contained" href="pages/home">Home</Button>
+                            <Button variant="contained" href="pages/homepage">Home</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
                             <Button variant="contained" href="pages/layoutTemplate">Web Layout Template</Button>
                         </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="pages/newUser">New user registration</Button>
-                            <Button disabled variant="outlined" href="pages/login">Login</Button>
-                            <Button disabled variant="outlined" href="pages/home">Home</Button>
-                        </Stack>
-                        <Box >
-                            {"<Box>"}Not done:{"</Box>"}
-                        </Box>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="">Calendar</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="">Social</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="">Grade</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="">Inbox?</Button>
-                        </Stack>
-                    </Box>
-                    <Box >
-                        {"<Box>"}Layout testings:{"</Box>"}
-                    </Box>
-                    <Box sx={{ p: 1 }}>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="pages/TEST_login">Login Layout Testing</Button>
-                            <Button disabled variant="outlined" href="pages/TEST_Dashboard_Layout_Demo">Dashboard Demo Layout</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button disabled variant="outlined" href="pages/TEST_drawer">Drawer Testing</Button>
 
-                        </Stack>
                     </Box>
                     <p>{"<p>"}Testing {"</p>"} </p>
                     <p>{"<p>"}Testing2{"</p>"}</p>

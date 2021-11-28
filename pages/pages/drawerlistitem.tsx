@@ -15,12 +15,13 @@ import GradingIcon from '@mui/icons-material/Grading';
 import ListItemButton from '@mui/material/ListItemButton';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import LinkIcon from '@mui/icons-material/Link';
+import BugReportIcon from '@mui/icons-material/BugReport';
 
 
 export const DrawerListItems = (
     <div>
         <List>
-            <ListItemButton component="a" href="home">
+            <ListItemButton component="a" href="homepage">
                 <ListItemIcon>
                     <HomeIcon />
                 </ListItemIcon>
@@ -28,7 +29,7 @@ export const DrawerListItems = (
                     Home
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="#">
+            <ListItemButton disabled component="a" href="#">
                 <ListItemIcon>
                     <EventIcon />
                 </ListItemIcon>
@@ -36,7 +37,7 @@ export const DrawerListItems = (
                     Calendar
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="#">
+            <ListItemButton disabled component="a" href="#">
                 <ListItemIcon>
                     <ConnectWithoutContactIcon />
                 </ListItemIcon>
@@ -44,7 +45,7 @@ export const DrawerListItems = (
                     Social
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="#">
+            <ListItemButton disabled component="a" href="#">
                 <ListItemIcon>
                     <GradingIcon />
                 </ListItemIcon>
@@ -64,12 +65,12 @@ export const DrawerListItems = (
                     School
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="canteen">
+            <ListItemButton component="a" href="catering">
                 <ListItemIcon>
                     <RestaurantIcon />
                 </ListItemIcon>
                 <ListItemText>
-                    Canteen
+                    Catering
                 </ListItemText>
             </ListItemButton>
             <ListItemButton component="a" href="usefullinks">
@@ -83,7 +84,7 @@ export const DrawerListItems = (
         </List>
         <Divider />
         <List>
-            <ListItemButton disabled>
+            <ListItemButton disabled component="a" href="#">
                 <ListItemIcon>
                     <SettingsIcon />
                 </ListItemIcon>
@@ -91,12 +92,20 @@ export const DrawerListItems = (
                     Settings
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton component="a" href="help">
                 <ListItemIcon>
                     <HelpIcon />
                 </ListItemIcon>
                 <ListItemText>
                     Help
+                </ListItemText>
+            </ListItemButton>
+            <ListItemButton component="a" href="linktoallpages">
+                <ListItemIcon>
+                    <BugReportIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Links to all pages
                 </ListItemText>
             </ListItemButton>
         </List>

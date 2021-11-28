@@ -20,7 +20,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { DrawerListItems } from './drawerlistitem'
 
-//Data
+//Tabs
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 const drawerWidth = 240;
 
@@ -93,6 +95,40 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
+//Tab
+interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index: number) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
 export default function MiniDrawer() {
 
     const theme = useTheme();
@@ -116,6 +152,13 @@ export default function MiniDrawer() {
         setAnchorEl(null);
     };
 
+    //Tab
+    const [valueTab, setValueTab] = React.useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+        setValueTab(newValue);
+    };
+
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
@@ -134,7 +177,7 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        School
+                        Catering
                     </Typography>
 
                     <IconButton
@@ -181,12 +224,27 @@ export default function MiniDrawer() {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Typography paragraph>
-                    Paragraph 1 School history...
+
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs value={valueTab} onChange={handleChange} aria-label="basic tabs example">
+                        <Tab label="Rendezvous" {...a11yProps(0)} />
+                        <Tab label="Cafe (A)" {...a11yProps(1)} />
+
+                    </Tabs>
+                </Box>
+                <TabPanel value={valueTab} index={0}>
+                    Menu of Rendezvous at M Building
+                </TabPanel>
+                <TabPanel value={valueTab} index={1}>
+                    Menu of Cafe at S.H.HO Academic Building (A)
+                </TabPanel>
+
+                {/*<Typography paragraph>
+                    Paragraph 1
                 </Typography>
                 <Typography paragraph>
                     Paragraph 2
-                </Typography>
+                </Typography>*/}
             </Box>
         </Box>
     );
