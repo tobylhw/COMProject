@@ -33,7 +33,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 //DrawerList
-import { DrawerListItems } from './pages/drawerlistitem'
+import { DrawerListItems } from './drawerlistitem'
 //icon
 import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
@@ -159,7 +159,7 @@ export default function Home(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        Index page TITLE HERE Index.tsx
+                        Index page TITLE HERE Home.tsx
                     </Typography>
 
                     <IconButton
@@ -212,15 +212,12 @@ export default function Home(props) {
                     </Box>
                     <Box sx={{ p: 1 }}>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="contained" href="pages/home">Home</Button>
+                            <Button variant="contained" href="layoutTemplate">Web Layout Template</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="contained" href="pages/layoutTemplate">Web Layout Template</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/newUser">New user registration</Button>
-                            <Button variant="outlined" href="pages/login">Login</Button>
-                            <Button variant="outlined" href="./index.tsx">Home</Button>
+                            <Button variant="outlined" href="newUser">New user registration</Button>
+                            <Button variant="outlined" href="login">Login</Button>
+                            <Button variant="outlined" href="home">Home</Button>
                         </Stack>
                         <Box >
                             {"<Box>"}Not done:{"</Box>"}
@@ -243,11 +240,11 @@ export default function Home(props) {
                     </Box>
                     <Box sx={{ p: 1 }}>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/TEST_login">Login Layout Testing</Button>
-                            <Button variant="outlined" href="pages/TEST_Dashboard_Layout_Demo">Dashboard Demo Layout</Button>
+                            <Button variant="outlined" href="TEST_login">Login Layout Testing</Button>
+                            <Button variant="outlined" href="TEST_Dashboard_Layout_Demo">Dashboard Demo Layout</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/TEST_drawer">Drawer Testing</Button>
+                            <Button variant="outlined" href="TEST_drawer">Drawer Testing</Button>
 
                         </Stack>
                     </Box>

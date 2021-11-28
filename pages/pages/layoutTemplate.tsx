@@ -1,20 +1,4 @@
-/* CMD
-cd C:\Users\tobyl\compj
-
-npm run dev
-npm install @types/react typescript
-npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @fontsource/roboto
-*/
-
-import { useState } from 'react';
 import * as React from 'react';
-
-//font
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -32,8 +16,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-//DrawerList
-import { DrawerListItems } from './pages/drawerlistitem'
 //icon
 import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
@@ -42,10 +24,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-
-
+import { DrawerListItems } from './drawerlistitem'
 
 const drawerWidth = 240;
 
@@ -118,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function Home(props) {
+export default function MiniDrawer() {
 
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -159,7 +138,7 @@ export default function Home(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        Index page TITLE HERE Index.tsx
+                        Pages Layout Template
                     </Typography>
 
                     <IconButton
@@ -206,54 +185,12 @@ export default function Home(props) {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Box >
-                    <Box >
-                        {"<Box>"}Go to pages:{"</Box>"}
-                    </Box>
-                    <Box sx={{ p: 1 }}>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="contained" href="pages/home">Home</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="contained" href="pages/layoutTemplate">Web Layout Template</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/newUser">New user registration</Button>
-                            <Button variant="outlined" href="pages/login">Login</Button>
-                            <Button variant="outlined" href="./index.tsx">Home</Button>
-                        </Stack>
-                        <Box >
-                            {"<Box>"}Not done:{"</Box>"}
-                        </Box>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Calendar</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Social</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Grade</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Inbox?</Button>
-                        </Stack>
-                    </Box>
-                    <Box >
-                        {"<Box>"}Layout testings:{"</Box>"}
-                    </Box>
-                    <Box sx={{ p: 1 }}>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/TEST_login">Login Layout Testing</Button>
-                            <Button variant="outlined" href="pages/TEST_Dashboard_Layout_Demo">Dashboard Demo Layout</Button>
-                        </Stack>
-                        <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="pages/TEST_drawer">Drawer Testing</Button>
-
-                        </Stack>
-                    </Box>
-                    <p>{"<p>"}Testing {"</p>"} </p>
-                    <p>{"<p>"}Testing2{"</p>"}</p>
-                </Box>
+                <Typography paragraph>
+                    Paragraph 1
+                </Typography>
+                <Typography paragraph>
+                    Paragraph 2
+                </Typography>
             </Box>
         </Box>
     );

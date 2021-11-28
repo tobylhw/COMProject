@@ -8,64 +8,95 @@ import SchoolIcon from '@mui/icons-material/School';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import Divider from '@mui/material/Divider';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HelpIcon from '@mui/icons-material/Help';
+import EventIcon from '@mui/icons-material/Event';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import GradingIcon from '@mui/icons-material/Grading';
+import ListItemButton from '@mui/material/ListItemButton';
+
 
 export const DrawerListItems = (
     <div>
         <List>
-            <ListItem button>
+            <ListItemButton component="a" href="home">
                 <ListItemIcon>
                     <HomeIcon />
                 </ListItemIcon>
                 <ListItemText>
                     Home
                 </ListItemText>
-            </ListItem>
-            <ListItem button>
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <EventIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Calendar
+                </ListItemText>
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <ConnectWithoutContactIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Social
+                </ListItemText>
+            </ListItemButton>
+            <ListItemButton>
+                <ListItemIcon>
+                    <GradingIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Grade
+                </ListItemText>
+            </ListItemButton>
+            <ListItemButton>
                 <ListItemIcon>
                     <InboxIcon />
                 </ListItemIcon>
                 <ListItemText>
                     Inbox
                 </ListItemText>
-            </ListItem>
+            </ListItemButton>
         </List>
         <Divider />
         <List>
-            <ListItem button>
+            <ListItemButton>
                 <ListItemIcon>
                     <SchoolIcon />
                 </ListItemIcon>
                 <ListItemText>
                     School
                 </ListItemText>
-            </ListItem>
-            <ListItem button>
+            </ListItemButton>
+            <ListItemButton>
                 <ListItemIcon>
                     <MenuBookIcon />
                 </ListItemIcon>
                 <ListItemText>
                     Homework
                 </ListItemText>
-            </ListItem>
+            </ListItemButton>
         </List>
         <Divider />
         <List>
-            <ListItem button>
+            <ListItemButton>
                 <ListItemIcon>
-                    <SchoolIcon />
+                    <SettingsIcon />
                 </ListItemIcon>
                 <ListItemText>
-                    School
+                    Settings
                 </ListItemText>
-            </ListItem>
-            <ListItem button>
+            </ListItemButton>
+            <ListItemButton>
                 <ListItemIcon>
-                    <MenuBookIcon />
+                    <HelpIcon />
                 </ListItemIcon>
                 <ListItemText>
-                    Homework
+                    Help
                 </ListItemText>
-            </ListItem>
+            </ListItemButton>
         </List>
     </div>
 );
