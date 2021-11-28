@@ -43,8 +43,8 @@ function ElevationScroll(props) {
 
 export default function ElevateAppBar(props) {
 
-    const [sid, setsid] = useState<String>();
-    const [pw, setpw] = useState<String>();
+    const [sid, setsid] = useState<string>();
+    const [pw, setpw] = useState<string>();
 
     function signup() {
         console.log(sid);

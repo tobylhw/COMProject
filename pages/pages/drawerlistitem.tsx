@@ -13,6 +13,8 @@ import EventIcon from '@mui/icons-material/Event';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import GradingIcon from '@mui/icons-material/Grading';
 import ListItemButton from '@mui/material/ListItemButton';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import LinkIcon from '@mui/icons-material/Link';
 
 
 export const DrawerListItems = (
@@ -26,7 +28,7 @@ export const DrawerListItems = (
                     Home
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="calendar">
+            <ListItemButton component="a" href="#">
                 <ListItemIcon>
                     <EventIcon />
                 </ListItemIcon>
@@ -34,7 +36,7 @@ export const DrawerListItems = (
                     Calendar
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="social">
+            <ListItemButton component="a" href="#">
                 <ListItemIcon>
                     <ConnectWithoutContactIcon />
                 </ListItemIcon>
@@ -42,7 +44,7 @@ export const DrawerListItems = (
                     Social
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton component="a" href="grade">
+            <ListItemButton component="a" href="#">
                 <ListItemIcon>
                     <GradingIcon />
                 </ListItemIcon>
@@ -50,18 +52,11 @@ export const DrawerListItems = (
                     Grade
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
-                <ListItemIcon>
-                    <InboxIcon />
-                </ListItemIcon>
-                <ListItemText>
-                    Inbox
-                </ListItemText>
-            </ListItemButton>
+
         </List>
         <Divider />
         <List>
-            <ListItemButton>
+            <ListItemButton component="a" href="school">
                 <ListItemIcon>
                     <SchoolIcon />
                 </ListItemIcon>
@@ -69,12 +64,20 @@ export const DrawerListItems = (
                     School
                 </ListItemText>
             </ListItemButton>
-            <ListItemButton>
+            <ListItemButton component="a" href="canteen">
                 <ListItemIcon>
-                    <MenuBookIcon />
+                    <RestaurantIcon />
                 </ListItemIcon>
                 <ListItemText>
-                    Homework
+                    Canteen
+                </ListItemText>
+            </ListItemButton>
+            <ListItemButton component="a" href="usefullinks">
+                <ListItemIcon>
+                    <LinkIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    Useful Links
                 </ListItemText>
             </ListItemButton>
         </List>
