@@ -214,13 +214,13 @@ export default function Home(props) {
                             {"<Box>"}Not done:{"</Box>"}
                         </Box>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Calendar</Button>
+                            <Button variant="outlined" href="calendar">Calendar</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Social</Button>
+                            <Button variant="outlined" href="social">Social</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
-                            <Button variant="outlined" href="">Grade</Button>
+                            <Button variant="outlined" href="grade">Grade</Button>
                         </Stack>
                         <Stack spacing={2} direction="row" sx={{ p: 0.5 }}>
                             <Button variant="outlined" href="">Inbox?</Button>
