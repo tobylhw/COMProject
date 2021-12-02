@@ -1,9 +1,10 @@
 /* CMD
-cd C:\Users\tobyl\compj
+cd [path]
 
-npm run dev
 npm install @types/react typescript
 npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @fontsource/roboto @mui/lab @mui/x-data-grid
+
+npm run dev
 
 */
 
