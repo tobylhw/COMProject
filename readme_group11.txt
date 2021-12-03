@@ -10,13 +10,13 @@ Group members : s186984 CAO Shuo
 
 ## Guidance
 
-First, in the project folder, install typescript:
+First, in the project folder, please install typescript:
 
 ```
 npm install @types/react typescript
 ```
 
-Hence, install the required packages:
+Hence, please install the required packages:
 
 ```
 npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @fontsource/roboto @mui/lab @mui/x-data-grid
